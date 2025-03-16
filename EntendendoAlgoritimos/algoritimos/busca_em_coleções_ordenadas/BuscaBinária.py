@@ -13,6 +13,6 @@ def binary_search(arr, target):
 
     return half + 1
 
-arr = [0, 1, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 16]
+arr = [0, 1, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 16, 17]
 
 print(binary_search(arr, 11))  # Correção na chamada da função
