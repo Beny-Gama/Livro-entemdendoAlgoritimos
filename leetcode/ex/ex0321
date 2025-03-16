@@ -1,0 +1,9 @@
+digits = [4,3,2,1]
+cont = 0
+for index, num in enumerate(digits):
+    c = '{}'.format(num) + ('0' * (len(digits) - (index + 1)))
+    cont += int(c)
+cont += 1
+lista = [int(digito) for digito in str(cont)]
+print(lista)
+

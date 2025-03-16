@@ -1,0 +1,11 @@
+o livro ensia os mais diveos tipos de algotiomos de ordenação... 
+
+
+enterdenor as nomenclaturas:
+
+ O(log n) = curva logaritima. ex: Pesquisa binaria
+O (n) =  curva linear: ex: Pesquisa simples
+O n Log(n) = curva exponecial: ex: quicksort 
+O (n²) = curva expoencial ao quadrado: ex: Operadores de Seleção 
+O (n!) = curva expoencial fatorial: ex: caxeiro viajante
+
