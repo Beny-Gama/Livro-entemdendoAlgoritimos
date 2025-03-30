@@ -10,5 +10,5 @@ while True:
         break
     
     print('Tente novamente. ', end='')
-print(f'Você digitou o numero: {cont[num].upper()}')
+print(f'Você digitou o numero: {cont[num].upper}')
 
