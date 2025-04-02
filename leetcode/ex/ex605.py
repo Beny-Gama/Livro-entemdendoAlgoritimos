@@ -10,7 +10,7 @@ def canPlaceFlowers(flowerbed, n):
                 direita  = flowerbed[i + 1] if i < final - 1 else 0
                 if esquerda == 0 and direita == 0:
                     flowerbed[i] = 1
-                    cont += 1
+                    cont += 1   
                     if cont >= n:
                         return True
         return cont >= n

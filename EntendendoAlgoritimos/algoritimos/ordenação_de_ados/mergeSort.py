@@ -5,6 +5,7 @@
 # https://www.youtube.com/watch?v=a5LfKZp34d8
 # leetcode 148
 
+
 def findMiddle(head):
     slow = head
     fast = head.next
