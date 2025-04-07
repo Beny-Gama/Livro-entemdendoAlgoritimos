@@ -57,8 +57,3 @@ while nó is not None:
     nó = ache_no_custo_mais_baixo(custos)
 
 
-
-
-
-def dijkstra(arr):
-    pass

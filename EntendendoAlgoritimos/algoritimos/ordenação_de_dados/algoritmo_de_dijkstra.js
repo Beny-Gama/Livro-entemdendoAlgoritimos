@@ -59,6 +59,18 @@ while (nó){
     }
 }
 
+function ache_no_custo_mais_baixo (custos) {
+    let custo_mais_baixo = Infinity
+    let no_mais_baixo = null
+    
+    for (node in custos) {
+        if (custos[node] < custo_mais_baixo && !processados) {
+            custo_mais_baixo = custos[node]
+            no_mais_baixo = node
+        }
+    }
+    return no_mais_baixo 
+}
 
 function dijkstra(arr) {
     
