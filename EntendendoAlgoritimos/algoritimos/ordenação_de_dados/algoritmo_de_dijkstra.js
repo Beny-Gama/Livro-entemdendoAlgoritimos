@@ -64,7 +64,7 @@ function ache_no_custo_mais_baixo (custos) {
     let no_mais_baixo = null
     
     for (node in custos) {
-        if (custos[node] < custo_mais_baixo && !processados) {
+        if (custos[node] < custo_mais_baixo && !processados.includes(node)) {
             custo_mais_baixo = custos[node]
             no_mais_baixo = node
         }

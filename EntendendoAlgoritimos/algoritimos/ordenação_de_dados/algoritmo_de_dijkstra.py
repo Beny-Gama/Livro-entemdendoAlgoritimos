@@ -31,7 +31,6 @@ pais['b'] = 'inicio';
 pais['fim'] = None
 
 processados = []
-
 def ache_no_custo_mais_baixo(custos):
     custo_mais_baixo = float('inf')
     nó_mais_baixo = None
