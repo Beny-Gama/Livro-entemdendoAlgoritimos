@@ -1,58 +1,68 @@
-# o algoritio de Dijkstra é basicamete deva em conta "pesos" para atingir determinado camonho.
-# ps1 ele não finciona com pesos negativos: O algoritno de bellman-Ford é o mais comum para caminhos com pesosas negativos.
+# Algoritmo de Dijkstra (sem pesos negativos)
 
-grafo = []
-
-grafo['inicio'] = []
+# Estrutura do grafo
+grafo = {}
+grafo['inicio'] = {}
 grafo['inicio']['a'] = 6
 grafo['inicio']['b'] = 1
 
-grafo['a'] = []
+grafo['a'] = {}
 grafo['a']['fim'] = 1
 
-grafo['b'] = []
-grafo['a']['b'] = 3
+grafo['b'] = {}
+grafo['b']['a'] = 3
 grafo['b']['fim'] = 5
 
-grafo['fim'] = []
+grafo['fim'] = {}
 
+# Custos iniciais
 infinito = float('inf')
 
-custos = [];
-custos['a'] = 6;
-custos['b'] = 2;
-custos['fim'] = infinito;
+custos = {}
+custos['a'] = 6
+custos['b'] = 1
+custos['fim'] = infinito
 
-print(grafo['inicio']['a']);
-
-pais = [];
-pais['a'] = 'inicio';
-pais['b'] = 'inicio';
+# Pais (ou predecessores)
+pais = {}
+pais['a'] = 'inicio'
+pais['b'] = 'inicio'
 pais['fim'] = None
 
+# Nós já processados
 processados = []
+
+# Função para encontrar o nó com menor custo
 def ache_no_custo_mais_baixo(custos):
     custo_mais_baixo = float('inf')
-    nó_mais_baixo = None
-    for nó in custos:
-        if custos[nó] < custo_mais_baixo and nó not in processados:
-            custo_mais_baixo = custos[nó]
-            nó_mais_baixo = nó
-    return nó_mais_baixo
+    no_mais_baixo = None
+    for no in custos:
+        if custos[no] < custo_mais_baixo and no not in processados:
+            custo_mais_baixo = custos[no]
+            no_mais_baixo = no
+    return no_mais_baixo
 
-nó = ache_no_custo_mais_baixo(custos)
-
-while nó is not None:
-    custo = custos[nó]
-    vizinhos = grafo[nó]
-
-    for n in vizinhos.keys():
+# Loop principal do algoritmo
+no = ache_no_custo_mais_baixo(custos)
+while no is not None:
+    custo = custos[no]
+    vizinhos = grafo[no]
+    for n in vizinhos:
         novo_custo = custo + vizinhos[n]
         if custos[n] > novo_custo:
             custos[n] = novo_custo
-            pais[n] = nó
+            pais[n] = no
+    processados.append(no)
+    no = ache_no_custo_mais_baixo(custos)
 
-    processados.append(nó)
-    nó = ache_no_custo_mais_baixo(custos)
-
-
+# Resultado final
+print("Custos finais:", custos)
+print("Caminho até o fim:")
+no = 'fim'
+caminho = []
+while no != 'inicio':
+    caminho.append(no)
+    no = pais[no]
+caminho.append('inicio')
+caminho.reverse()
+print(" -> ".join(caminho))

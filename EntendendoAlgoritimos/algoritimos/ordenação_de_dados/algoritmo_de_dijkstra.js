@@ -41,7 +41,7 @@ print(grafo['inicio']['a']);
 const pais = [];
 pais['a'] = 'inicio';
 pais['b'] = 'inicio';
-pais['fim'] = None
+pais['fim'] = null
 
 const no = ache_no_custo_mais_baixo(custo);
 
@@ -63,7 +63,7 @@ function ache_no_custo_mais_baixo (custos) {
     let custo_mais_baixo = Infinity
     let no_mais_baixo = null
     
-    for (node in custos) {
+    for (let node of object.keys(custos)) {
         if (custos[node] < custo_mais_baixo && !processados.includes(node)) {
             custo_mais_baixo = custos[node]
             no_mais_baixo = node
@@ -72,6 +72,3 @@ function ache_no_custo_mais_baixo (custos) {
     return no_mais_baixo 
 }
 
-function dijkstra(arr) {
-    
-}
