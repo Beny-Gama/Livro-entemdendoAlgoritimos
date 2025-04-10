@@ -2,15 +2,15 @@ lista = []
 while True:
     num = int(input('Digite um valor: '))
     if lista == []:
-        list.append(num)
+        lista.append(num)
     else:
         for n in lista:
             if n > num:
-                lista.pop(num)
+                lista.insert(len(lista), num)
                 break
     
     res = str(input('Deseja continuar? [S/N] ')).upper()[0]
-    if res == 'S':
+    if res == 'N':
         break
     
 print('-='*40)
