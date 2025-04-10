@@ -1,10 +1,10 @@
 //  o algoritio de Dijkstra é basicamete deva em conta "pesos" para atingir determinado camonho.
 //  ps1 ele não finciona com pesos negativos: O algoritno de bellman-Ford é o mais comum para caminhos com pesosas negativos.
 
-const grafo = {};
+let grafo = {};
 
 grafo['inicio'] = {};
-grafo['inicio']['a'] = 6;;
+grafo['inicio']['a'] = 6;
 grafo['inicio']['b'] = 1;
 
 grafo['a'] = {};
@@ -18,27 +18,28 @@ grafo['fim'] = {};
 
 const infinito = Number.POSITIVE_INFINITY; // define infinito em JS
 
-const custo = {};
+let custo = {};
 custo['a'] = 6;
 custo['b'] = 2;
 custo['fim'] = infinito;
 
 console.log(grafo['inicio']['a']);
-const pais = {};
+
+let pais = {};
 pais['a'] = 'inicio';
 pais['b'] = 'inicio';
 pais['fim'] = null;
 
 const processados = {}
 
-const custos = [];
+let custos = [];
 custos['a'] = 6;
 custos['b'] = 2;
 custos['fim'] = infinito;
 
 print(grafo['inicio']['a']);
 
-const pais = [];
+let pais = [];
 pais['a'] = 'inicio';
 pais['b'] = 'inicio';
 pais['fim'] = null
@@ -71,4 +72,3 @@ function ache_no_custo_mais_baixo (custos) {
     }
     return no_mais_baixo 
 }
-
