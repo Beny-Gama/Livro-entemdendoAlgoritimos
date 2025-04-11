@@ -1,16 +1,14 @@
 lista = []
 while True:
     num = int(input('Digite um valor: '))
-    if lista == []:
-        lista.append(num)
+    for n in lista:
+        if n <= num:
+            lista.insert(n, num)
+            break
     else:
-        for n in lista:
-            if n > num:
-                lista.insert(len(lista), num)
-                break
-    
+        lan()
     res = str(input('Deseja continuar? [S/N] ')).upper()[0]
-    if res == 'N':
+    if res in 'Nn':
         break
     
 print('-='*40)
