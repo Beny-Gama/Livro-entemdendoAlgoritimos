@@ -55,10 +55,12 @@ while no is not None:
     processados.append(no)
     no = ache_no_custo_mais_baixo(custos)
 
+
 # Resultado final
 print("Custos finais:", custos)
 print("Caminho até o fim:")
 no = 'fim'
+
 caminho = []
 while no != 'inicio':
     caminho.append(no)
