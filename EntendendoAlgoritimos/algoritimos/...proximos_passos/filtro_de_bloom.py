@@ -1,0 +1,5 @@
+# Filtros de Bloom
+# Os filtros de Bloom oferecem uma solução. Eles são estruturas de dados probabilísticas que fornecem uma resposta que pode estar errada, mas que provavelmente estará correta. Em vez de perguntar a uma hash, é possível perguntar a um filtro de bloom se a URL já foi rastreada antes. Uma tabela hash forneceria um resultado exato, mas um filtro de bloom fornecerá um resultado que provavelmente estará correto:
+# • Falsos positivos são possíveis. A Google poderá dizer "Você já rastreou este site", mesmo que isso não seja verdade.
+# • Falsos negativos não são possíveis. Caso o filtro de bloom diga "Você ainda não rastreou este site", então você definitivamente não o rastreou.
+# Os filtros de bloom são ótimos porque eles usam pouco espaço. Uma tabela hash teria de armazenar cada URL rastreada pela Google, enquanto um filtro de bloom não precisa. Eles são ótimos pois você não precisa de uma resposta exata em todos os exemplos fornecidos. O bit.ly pode dizer "Nós achamos que este site é malicioso, então tenha cuidado".
